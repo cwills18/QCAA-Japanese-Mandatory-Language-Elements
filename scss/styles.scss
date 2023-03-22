@@ -1,0 +1,70 @@
+@use "defaults.scss";
+@import "themes.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	@extend %default-display;
+	background: linear-gradient(#00ddc7, #017c70);
+	padding-bottom: 3em;
+}
+
+.heading {
+	@extend %default-display;
+	@extend %default-English-font;
+	@extend %default-heading;
+	width: 95%;
+	align-items: flex-start;
+	margin-top: 0.5em;
+}
+
+.subheading {
+	@extend %default-display;
+	@extend %default-English-font;
+	@extend %default-subheading;
+	width: 95%;
+	align-items: flex-start;
+}
+
+.section-heading {
+	@extend %default-display;
+	@extend %default-English-font;
+	@extend %default-section-heading;
+	width: 95%;
+	align-items: flex-start;
+}
+
+.clickable-list {
+	@extend %default-display;
+	width: 95%;
+	&__list-item {
+		@extend %default-display;
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+		background-color: white;
+		border-radius: 4px;
+		box-shadow: 1px 1px 1px black;
+		transition: all 150ms ease-in-out;
+		margin: 5px 0px;
+		padding: 0.75em 0em;
+		&:hover {
+			background-color: #f1e7b6;
+			p {
+				color: black;
+			}
+		}
+		&--title {
+			@extend %default-English-font;
+			color: $purple;
+			font-size: 2.5em;
+		}
+		&--emojis {
+			font-size: 2.5em;
+			padding: 0px 50px;
+		}
+	}
+}
