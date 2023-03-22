@@ -1,0 +1,280 @@
+/*Colour Palette*/
+/*Fonts*/
+body, main, .heading, .stroke-selector, .stroke-selector__number-menu, .cards-for-stroke, .character-box, .backToHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.heading, .backToHome, .section-heading {
+  font-size: 1em;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  text-align: left;
+  color: black;
+}
+
+.heading {
+  font-size: 2.7em;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 800;
+  text-align: left;
+  color: #400082;
+}
+
+.section-heading {
+  margin: 1.8em 0em 1em;
+  color: #400082;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+/*Colour Palette*/
+/*Fonts*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.backToHome {
+  width: fit-content;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  margin: 0% auto;
+  background-color: #400082;
+  color: white;
+  font-size: 0.875em;
+  padding: 0.2em 2em;
+  border: none;
+}
+@media only screen and (max-width: 30em) {
+  .backToHome {
+    padding: 0.5em;
+  }
+}
+@media only screen and (min-width: 30em) and (max-width: 38em) {
+  .backToHome {
+    padding: 0.5em;
+  }
+}
+.backToHome:hover {
+  background-color: #fe346e;
+  transition: all 150ms ease-in-out;
+}
+
+/*Colour Palette*/
+/*Fonts*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #00bdaa;
+  padding-bottom: 2em;
+}
+
+main {
+  width: 95%;
+}
+@media only screen and (max-height: 43em) {
+  main {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 36em) {
+  main {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 36em) and (max-width: 44em) {
+  main {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 44em) and (max-width: 75em) {
+  main {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 75em) {
+  main {
+    width: 95%;
+  }
+}
+
+.heading {
+  width: 95%;
+  align-items: flex-start;
+  margin-top: 0.5em;
+}
+
+.section-heading {
+  width: 95%;
+  align-items: flex-start;
+  margin: 1.5em 0em 0.5em;
+}
+
+.stroke-selector {
+  background-color: #400082;
+  color: white;
+  padding: 0.3em;
+  font-family: "Kiwi Maru", serif;
+  position: fixed;
+}
+@media only screen and (max-height: 43em) {
+  .stroke-selector {
+    right: 0;
+    margin-top: 0.5em;
+    width: 10%;
+    border-radius: 4px 0px 0px 4px;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .stroke-selector {
+    bottom: 0;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 36em) and (max-width: 44em) {
+  .stroke-selector {
+    right: 0;
+    margin-top: 0.5em;
+    width: 20%;
+    border-radius: 4px 0px 0px 4px;
+  }
+}
+@media only screen and (min-width: 44em) and (max-width: 75em) {
+  .stroke-selector {
+    right: 0;
+    margin-top: 0.5em;
+    width: 10%;
+    border-radius: 4px 0px 0px 4px;
+  }
+}
+@media only screen and (min-width: 75em) {
+  .stroke-selector {
+    right: 0;
+    margin-top: 0.5em;
+    width: 5%;
+    border-radius: 4px 0px 0px 4px;
+  }
+}
+.stroke-selector__heading {
+  font-size: 1em;
+  margin: 0.3em;
+  text-align: center;
+}
+@media only screen and (max-width: 36em) {
+  .stroke-selector__heading {
+    margin: 0.3em 0em 0.5em;
+  }
+}
+.stroke-selector__number-menu {
+  flex-flow: row wrap;
+  margin: 0.3em;
+}
+@media only screen and (max-height: 43em) {
+  .stroke-selector__number-menu {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.2em;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .stroke-selector__number-menu {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0.2em;
+    margin-bottom: 0.5em;
+  }
+}
+@media only screen and (min-width: 36em) and (max-width: 44em) {
+  .stroke-selector__number-menu {
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.2em;
+  }
+}
+@media only screen and (min-width: 44em) {
+  .stroke-selector__number-menu {
+    flex-direction: column;
+  }
+}
+.stroke-selector__number {
+  font-size: 1.5em;
+  text-align: center;
+}
+@media only screen and (max-width: 36em) {
+  .stroke-selector__number {
+    font-size: 1.3em;
+  }
+}
+.stroke-selector__number:hover {
+  color: #fe346e;
+  transition: all 150ms ease-in-out;
+}
+
+.cards-for-stroke {
+  flex-flow: row wrap;
+  width: 95%;
+  align-items: flex-start;
+}
+@media only screen and (max-width: 36em) {
+  .cards-for-stroke {
+    justify-content: center;
+  }
+}
+
+.character-box {
+  background-color: white;
+  width: 12em;
+  height: 12em;
+  border-radius: 4px;
+  margin: 8px 4px;
+  justify-content: space-between;
+}
+.character-box__title {
+  text-align: center;
+  font-size: 1.25em;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 800;
+  color: black;
+}
+.character-box__kanji {
+  font-family: "Klee One", "Kiwi Maru", cursive;
+  font-size: 4.5em;
+}
+.character-box__link {
+  width: 100%;
+  text-align: center;
+  font-size: 1.1em;
+  font-family: "Kiwi Maru", serif;
+  font-weight: bold;
+  color: #400082;
+  text-decoration: none;
+}
+.character-box__link:hover {
+  background-color: #f1e7b6;
+  color: black;
+  transition: all 150ms ease-in-out;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}

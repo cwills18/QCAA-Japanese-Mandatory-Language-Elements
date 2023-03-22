@@ -1,0 +1,93 @@
+/*Colour Palette*/
+/*Fonts*/
+body, .heading, .subheading, .section-heading, .clickable-list, .clickable-list__list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.heading, .subheading, .section-heading, .clickable-list__list-item--title {
+  font-size: 1em;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  text-align: left;
+  color: black;
+}
+
+.heading {
+  font-size: 2.7em;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 800;
+  text-align: left;
+  color: #400082;
+}
+
+.subheading {
+  color: #400082;
+  font-size: 2em;
+}
+
+.section-heading {
+  margin: 1.8em 0em 1em;
+  color: #400082;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+/*Colour Palette*/
+/*Fonts*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(#00ddc7, #017c70);
+  padding-bottom: 3em;
+}
+
+.heading {
+  width: 95%;
+  align-items: flex-start;
+  margin-top: 0.5em;
+}
+
+.subheading {
+  width: 95%;
+  align-items: flex-start;
+}
+
+.section-heading {
+  width: 95%;
+  align-items: flex-start;
+}
+
+.clickable-list {
+  width: 95%;
+}
+.clickable-list__list-item {
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px black;
+  transition: all 150ms ease-in-out;
+  margin: 5px 0px;
+  padding: 0.75em 0em;
+}
+.clickable-list__list-item:hover {
+  background-color: #f1e7b6;
+}
+.clickable-list__list-item:hover p {
+  color: black;
+}
+.clickable-list__list-item--title {
+  color: #400082;
+  font-size: 2.5em;
+}
+.clickable-list__list-item--emojis {
+  font-size: 2.5em;
+  padding: 0px 50px;
+}

@@ -1,0 +1,51 @@
+/*Colour Palette*/
+/*Fonts*/
+.backToHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.backToHome {
+  font-size: 1em;
+  font-family: "Kiwi Maru", serif;
+  font-weight: 400;
+  text-align: left;
+  color: black;
+}
+
+/*Colour Palette*/
+/*Fonts*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.backToHome {
+  width: fit-content;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  margin: 0% auto;
+  background-color: #400082;
+  color: white;
+  font-size: 0.875em;
+  padding: 0.2em 2em;
+  border: none;
+}
+@media only screen and (max-width: 30em) {
+  .backToHome {
+    padding: 0.5em;
+  }
+}
+@media only screen and (min-width: 30em) and (max-width: 38em) {
+  .backToHome {
+    padding: 0.5em;
+  }
+}
+.backToHome:hover {
+  background-color: #fe346e;
+  transition: all 150ms ease-in-out;
+}

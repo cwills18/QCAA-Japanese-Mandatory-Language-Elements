@@ -1,0 +1,33 @@
+@use "defaults.scss";
+@import "themes.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.backToHome {
+	@extend %default-display;
+	@extend %default-English-font;
+	width: fit-content;
+	align-content: center;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	margin: 0% auto;
+	background-color: $purple;
+	color: white;
+	font-size: 0.875em;
+	padding: 0.2em 2em;
+	border: none;
+	@media only screen and (max-width: 30em) {
+		padding: 0.5em;
+	}
+	@media only screen and (min-width: 30em) and (max-width: 38em) {
+		padding: 0.5em;
+	}
+	&:hover {
+		background-color: $pink;
+		transition: all 150ms ease-in-out;
+	}
+}
