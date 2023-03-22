@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Japanese Mandatory Elements</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background: linear-gradient(#00ddc7, #017c70);
+        color: #400082;
+        font-family: "Kiwi Maru", serif;
+      }
+      button {
+        display: block;
+        margin: auto 0;
+        width: 100%;
+        transition: all 150ms ease-in-out;
+      }
+      h1 {
+        font-weight: 400;
+      }
+      .grammarHeading {
+        color: #400082;
+        background-color: white;
+        font-size: 2em;
+        margin: 5px 0px;
+        font-family: "Kiwi Maru", serif;
+        border-radius: 4px;
+        box-shadow: 1px 1px 1px black;
+      }
+      .grammarHeading:hover {
+        background-color: #f1e7b6;
+        color: black;
+      }
+      .emojiSpacing {
+        padding: 0px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <strong>QLD Senior Japanese</strong><br />Mandatory Language Elements
+    </h1>
+    <h2>Grammar</h2>
+    <div class="Section" id="GrammarSection">
+      <div class="Section" id="adjectivesSection">
+        <button class="grammarHeading" id="adjectivesHeading">
+          <sp class="emojis">😱 😭 😁</sp>
+          <sp class="emojiSpacing">けいようし // Adjectives</sp>
+          <sp class="emojis">😁 😭 😱</sp>
+        </button>
+      </div>
+      <div class="Section">
+        <button class="grammarHeading" id="adverbsHeading">
+          🐌 🚀 🔕<sp class="emojiSpacing">ふくし // Adverbs</sp>🔕 🚀 🐌
+        </button>
+      </div>
+      <div class="Section">
+        <button class="grammarHeading" id="conjunctionsHeading">
+          & ➕ ☌ <sp class="emojiSpacing">せつぞくし // Conjunctions</sp> ☌ ➕ &
+        </button>
+      </div>
+      <div class="Section">
+        <button class="grammarHeading" id="comparisonsHeading">
+          🤼‍♂️ ⚖️ 🎭<sp class="emojiSpacing">ひかく // Comparisons</sp> 🤼‍♂️ ⚖️ 🎭
+        </button>
+      </div>
+      <div class="Section">
+        <button class="grammarHeading" id="demonstrativesHeading">
+          👆 👇 👈<sp class="emojiSpacing">しじご // Demonstratives </sp>👉 👆
+          👇
+        </button>
+      </div>
+      <div class="Section">
+        <button class="grammarHeading" id="interjectionsHeading">
+          💁🏽‍♂️ ⁉️ 🗣<sp class="emojiSpacing">かんどうし // Interjections</sp>🗣 ⁉️
+          💁🏽‍♂️
+        </button>
+      </div>
+      <div class="Section">
+        <button class="grammarHeading" id="interrogativesHeading">
+          🙋🏻‍♀️ 🤔 ❓<sp class="emojiSpacing">ぎもんし // Interrogatives</sp>❓ 🤔
+          🙋🏻‍♀️
+        </button>
+      </div>
+      <div class="Section">
+        <button class="grammarHeading" id="nounsHeading">
+          🦊 ☔️ 🍣<sp class="emojiSpacing">めいし // Nouns</sp>🍣 ☔️ 🦊
+        </button>
+      </div>
+      <div class="Section">
+        <button class="grammarHeading" id="particlesHeading">
+          ⭕️ ⏪ 🚩<sp class="emojiSpacing">じょし // Particles</sp> 🚩 ⏪ ⭕️
+        </button>
+      </div>
+      <div class="Section">
+        <button class="grammarHeading" id="verbsHeading">
+          💃 🏄🏿‍♂️ 🏊🏼‍♀️<sp class="emojiSpacing">どうし // Verbs</sp>🏊🏼‍♀️ 🏄🏿‍♂️ 💃
+        </button>
+      </div>
+    </div>
+    <h2>Other</h2>
+    <div class="Section" id="OtherSection">
+      <div class="Section">
+        <button class="grammarHeading" id="kanjiHeading">
+          🈷️ 🈳 🈴<sp class="emojiSpacing">かんじ // Kanji</sp>🈴 🈳 🈷️
+        </button>
+      </div>
+      <div class="Section">
+        <button class="grammarHeading" id="expressionsHeading">
+          👏🏼 🙏🏾 💬<sp class="emojiSpacing">ひょうげん // Expressions</sp>💬 🙏🏾
+          👏🏼
+        </button>
+      </div>
+    </div>
+    <script>
+      let name = prompt("What's your name?");
+      let japaneseStudy = prompt("Are you studying Japanese?").toLowerCase();
+      if (
+        japaneseStudy === "yes" ||
+        japaneseStudy === "yeah" ||
+        japaneseStudy === "yep"
+      ) {
+        alert(`Happy studying ${name}!`);
+      } else {
+        alert(`You probably don't need this website ${name}!`);
+      }
+
+      document.getElementById("adjectivesHeading").onclick = function () {
+        window.location.href = "pages/Adjectives.html";
+      };
+      document.getElementById("adverbsHeading").onclick = function () {
+        window.location.href = "pages/Adverbs.html";
+      };
+      document.getElementById("conjunctionsHeading").onclick = function () {
+        window.location.href = "pages/Conjunctions.html";
+      };
+      document.getElementById("comparisonsHeading").onclick = function () {
+        window.location.href = "pages/Comparisons.html";
+      };
+      document.getElementById("demonstrativesHeading").onclick = function () {
+        window.location.href = "pages/Demonstratives.html";
+      };
+      document.getElementById("interjectionsHeading").onclick = function () {
+        window.location.href = "pages/Interjections.html";
+      };
+      document.getElementById("interrogativesHeading").onclick = function () {
+        window.location.href = "pages/Interrogatives.html";
+      };
+      document.getElementById("nounsHeading").onclick = function () {
+        window.location.href = "pages/Nouns.html";
+      };
+      document.getElementById("particlesHeading").onclick = function () {
+        window.location.href = "pages/Particles.html";
+      };
+      document.getElementById("verbsHeading").onclick = function () {
+        window.location.href = "pages/Verbs.html";
+      };
+      document.getElementById("kanjiHeading").onclick = function () {
+        window.location.href = "pages/Kanji.html";
+      };
+      document.getElementById("expressionsHeading").onclick = function () {
+        window.location.href = "pages/Expressions.html";
+      };
+    </script>
+  </body>
+</html>
