@@ -1,38 +1,66 @@
-document.getElementById("adjectivesButton").onclick = function () {
-	window.location.href = "html/Adjectives.html";
-};
-document.getElementById("adverbsButton").onclick = function () {
-	window.location.href = "html/Adverbs.html";
-};
-document.getElementById("conjunctionsButton").onclick = function () {
-	window.location.href = "html/Conjunctions.html";
-};
-document.getElementById("comparisonsButton").onclick = function () {
-	window.location.href = "html/Comparisons.html";
-};
-document.getElementById("demonstrativesButton").onclick =
-	function () {
-		window.location.href = "html/Demonstratives.html";
-	};
-document.getElementById("interjectionsButton").onclick = function () {
-	window.location.href = "html/Interjections.html";
-};
-document.getElementById("interrogativesButton").onclick =
-	function () {
-		window.location.href = "html/Interrogatives.html";
-	};
-document.getElementById("nounsButton").onclick = function () {
-	window.location.href = "html/Nouns.html";
-};
-document.getElementById("particlesButton").onclick = function () {
-	window.location.href = "html/Particles.html";
-};
-document.getElementById("verbsButton").onclick = function () {
-	window.location.href = "html/Verbs.html";
-};
-document.getElementById("kanjiButton").onclick = function () {
-	window.location.href = "html/Kanji.html";
-};
-document.getElementById("expressionsButton").onclick = function () {
-	window.location.href = "html/Expressions.html";
-};
+function toMainMenu() {
+	window.location.href = "./../index.html";
+}
+const backToHomeButton = document.querySelector(".backToHome");
+backToHomeButton.addEventListener("click", toMainMenu);
+
+//Since the table loads with English already in alphabetical order,
+//the default value to sort for English will be reverse. The following
+//variable will store which way the list needs to filter next
+//(opposite of last applied). The variable will be updated each time
+//the sortTableEnglish function runs, so that it is ready for the next sort.
+let englishSortToggle = "za";
+//the default for hiragana will be to sort alphabetically, since it will not be in alphabetical order once it loads
+let hiraganaSortToggle = "az";
+
+//a function that will sort tables alphabetically or reverse alphabetically by column, you pass the id of the
+//table in, the name of the column,  and the columnNumber (first column being 0).
+function sortTableAlphabetically(tableId, columnName, columnNumber) {
+	const table = document.getElementById(tableId);
+	let toggle, rows, shouldSwitch, i, x, y;
+	switch (columnName) {
+		case "hiragana":
+			toggle = hiraganaSortToggle;
+			if (hiraganaSortToggle === "az") {
+				hiraganaSortToggle = "za";
+			} else {
+				hiraganaSortToggle = "az";
+			}
+			break;
+		case "english":
+		default:
+			toggle = englishSortToggle;
+			if (englishSortToggle === "za") {
+				englishSortToggle = "az";
+			} else {
+				englishSortToggle = "za";
+			}
+			break;
+	}
+	let switching = true;
+	rows = table.rows;
+	while (switching) {
+		switching = false;
+		for (i = 1; i < rows.length - 1; i++) {
+			shouldSwitch = false;
+			x = rows[i].getElementsByTagName("TD")[columnNumber];
+			y = rows[i + 1].getElementsByTagName("TD")[columnNumber];
+			if (toggle === "az") {
+				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+					shouldSwitch = true;
+					break;
+				}
+			}
+			if (toggle === "za") {
+				if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+					shouldSwitch = true;
+					break;
+				}
+			}
+		}
+		if (shouldSwitch) {
+			rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+			switching = true;
+		}
+	}
+}

@@ -1,0 +1,139 @@
+@use "./../back-to-main.scss";
+@use "./../defaults.scss";
+@import "./../themes.scss";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	@extend %default-display;
+	width: 100%;
+	background-color: $teal;
+}
+
+main {
+	color: $purple;
+	font-family: $default;
+	width: 95%;
+}
+
+.headings {
+	width: 100%;
+	&--main {
+		@extend %default-display;
+		@extend %default-English-font;
+		@extend %default-heading;
+		align-items: flex-start;
+		margin-top: 0.5em;
+	}
+	&--grammar {
+		@extend %default-page-subheading;
+	}
+	&--table {
+		@extend %default-page-subheading;
+	}
+}
+
+.grammar-table {
+	width: 100%;
+	background-color: white;
+	color: black;
+	margin: 1em 0em 4em;
+	text-align: center;
+	border: 0.25em solid $purple;
+	font-family: $Japanese-handwritten;
+	font-weight: 400;
+	& th {
+		font-family: $default;
+		padding: 0.25em 0em;
+	}
+	&__english-headers {
+		background-color: lightblue;
+		color: $purple;
+		padding-left: 1em;
+		text-align: left;
+		font-family: $default;
+	}
+	&__spans {
+		&--removed-char {
+			text-decoration: line-through;
+			color: $light-pink;
+		}
+		&--extra-char {
+			color: rgb(255, 149, 0);
+			font-weight: 600;
+		}
+		&--target-grammar {
+			color: $light-blue;
+			font-weight: 600;
+		}
+	}
+}
+
+.vocab-table {
+	font-family: $Japanese-handwritten;
+	font-weight: 600;
+	font-size: 1em;
+	background-color: $teal;
+	z-index: 19;
+	position: relative;
+	&__header-row {
+		background-color: $purple;
+		color: #fff;
+		font-family: $default;
+		font-weight: bold;
+		border: 1px solid $purple;
+		position: sticky;
+		top: 0;
+		z-index: 20;
+	}
+	& tr {
+		&:hover td {
+			background-color: $sand;
+		}
+	}
+	& td {
+		padding: 4px;
+		border: 1px solid $purple;
+		background-color: white;
+	}
+}
+
+.header-item {
+	position: relative;
+	&--english {
+		min-width: 150px;
+	}
+	&--hiragana {
+		min-width: 150px;
+	}
+	&--kanji {
+		min-width: 100px;
+	}
+	&__sort-btn {
+		border: none;
+		background-color: white;
+		color: $pink;
+		font-family: $default;
+		font-weight: bold;
+		font-size: 1.1em;
+		padding: 0.01em 0.2em;
+		position: absolute;
+		&--english {
+			right: 0.2em;
+			top: 0.5em;
+			bottom: 0.5em;
+		}
+		&--hiragana {
+			right: 0.2em;
+			top: 0.5em;
+			bottom: 0.5em;
+		}
+		&:hover {
+			background-color: $pink;
+			color: white;
+		}
+	}
+}
