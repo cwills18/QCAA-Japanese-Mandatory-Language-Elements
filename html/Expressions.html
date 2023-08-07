@@ -1,50 +1,783 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mandatory Grammar - Expressions</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        background-color: #00bdaa;
-        color: #400082;
-        font-family: "Kiwi Maru";
-      }
-      .backToHome {
-        display: block;
-        margin: 0 auto;
-        position: fixed;
-        background-color: #400082;
-        color: white;
-        font-family: "Kiwi Maru";
-        font-size: 14px;
-        border: none;
-        margin-top: -22px;
-        margin-left: 40%;
-        margin-right: 40%;
-      }
-      .backToHome:hover {
-        background-color: #fe346e;
-        transition: all 150ms ease-in-out;
-      }
-    </style>
-  </head>
-  <body>
-    <button class="backToHome">↑ back to main page ↑</button>
-    <h1>Expressions</h1>
-    <p>Content coming soon.</p>
-    <script>
-      function toMainMenu() {
-        window.location.href = "../index.html";
-      }
-      let backToHomeButton = document.querySelector(".backToHome");
-      backToHomeButton.addEventListener("click", toMainMenu);
-    </script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mandatory Grammar - Expressions</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="./../css/pages/generic-page.css" />
+		<script type="text/javascript" src="./../javascript/script.js" defer></script>
+	</head>
+	<body>
+		<button class="backToHome">↑ back to main page ↑</button>
+		<main>
+			<h1 class="headings--main">Expressions</h1>
+			<h3 class="headings--table">Table of Common Expressions</h3>
+			<p class="para para--vocab-section">
+				The following table summarises common expressions in Japanese that you should know. All of the QCAA mandatory
+				expressions are contained in this table.
+			</p>
+			<table class="tableizer-table vocab-table" id="vocabTableExpressions">
+				<thead>
+					<tr class="tableizer-firstrow vocab-table__header-row">
+						<th class="header-item header-item--english">
+							English<button
+								class="header-item__sort-btn header-item__sort-btn--english"
+								id="expressionsSortButtonEnglish"
+							>
+								⇅
+							</button>
+						</th>
+						<th class="header-item header-item--hiragana">
+							Hiragana<button
+								class="header-item__sort-btn header-item__sort-btn--hiragana"
+								id="expressionsSortButtonHiragana"
+							>
+								⇅
+							</button>
+						</th>
+						<th class="header-item header-item--kanji">Kanji</th>
+						<th class="header-item header-item--type">Politeness</th>
+						<th>Main Category</th>
+						<th>Secondary Category</th>
+						<th>Notes</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Be quiet</td>
+						<td>しずかにして　（ください）</td>
+						<td>静かにして</td>
+						<td>Casual (polite)</td>
+						<td>Requests</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Certainly. / I have understood.</td>
+						<td>かしこまりました。</td>
+						<td>&nbsp;</td>
+						<td>Keigo</td>
+						<td>Shopping</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Cloudy with a chance of rain</td>
+						<td>くもり　時々 　あめ</td>
+						<td>曇り時々雨</td>
+						<td>&nbsp;</td>
+						<td>Weather</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Congratulations.</td>
+						<td>おめでとう　(ございます)。</td>
+						<td>&nbsp;</td>
+						<td>Casual (polite)</td>
+						<td>Congratulatory</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Die!</td>
+						<td>しね！</td>
+						<td>&nbsp;</td>
+						<td>Rude slang</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>Very strong and cruel</td>
+					</tr>
+					<tr>
+						<td>Exactly; as per that</td>
+						<td>そのとおり</td>
+						<td>その通り</td>
+						<td>&nbsp;</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Excuse me / I'm sorry</td>
+						<td>すみません。</td>
+						<td>&nbsp;</td>
+						<td>Polite</td>
+						<td>Apologies</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Excuse me but...</td>
+						<td>すみませんが...</td>
+						<td>&nbsp;</td>
+						<td>Polite</td>
+						<td>Apologies</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Good evening (night)</td>
+						<td>こんばんは</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>Greetings</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Good morning (before 10ish)</td>
+						<td>おはよう　（ございます）</td>
+						<td>&nbsp;</td>
+						<td>Casual (polite)</td>
+						<td>Greetings</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Good night (when you're going to bed)</td>
+						<td>おやすみ　（なさい）</td>
+						<td>お休みなさい</td>
+						<td>Casual (polite)</td>
+						<td>Farewells</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Goodbye (when you won't see someone for a while)</td>
+						<td>さようなら</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>Farewells</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Got it!</td>
+						<td>りょうかい！</td>
+						<td>了解</td>
+						<td>Casual</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Happy Birthday.</td>
+						<td>(お)たんじょうび おめでとう (ございます)。</td>
+						<td>(お)誕生日おめでとうございます</td>
+						<td>Casual (polite)</td>
+						<td>Congratulatory</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Happy New Year.</td>
+						<td>あけまして　おめでとう　(ございます)。</td>
+						<td>明けましておめでとうございます</td>
+						<td>Casual (polite)</td>
+						<td>Congratulatory</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Have you decided what you'd like?</td>
+						<td>ごちゅうもんはおきまりですか。</td>
+						<td>ご注文はお決まりですか</td>
+						<td>Keigo</td>
+						<td>Food</td>
+						<td>Restaurant</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Hello</td>
+						<td>こんにちは</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>Greetings</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Hello (said on the phone)</td>
+						<td>もしもし</td>
+						<td>&nbsp;</td>
+						<td>Polite</td>
+						<td>Greetings</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>How are you? (Lit: are you well?)</td>
+						<td>(お) げんき (ですか)</td>
+						<td>お元気ですか。</td>
+						<td>Casual (polite)</td>
+						<td>Greetings</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>How is the weather in ~?</td>
+						<td>～のてんきは　どうですか。</td>
+						<td>～の天気はどうですか。</td>
+						<td>&nbsp;</td>
+						<td>Weather</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>How many people?</td>
+						<td>なんめいさまですか。</td>
+						<td>何名様ですか。</td>
+						<td>Keigo</td>
+						<td>Food</td>
+						<td>Restaurant</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>How old are you?</td>
+						<td>なんさいですか。</td>
+						<td>何才ですか・何歳ですか。</td>
+						<td>Polite</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>How was it?</td>
+						<td>いかがでしたか。</td>
+						<td>&nbsp;</td>
+						<td>Keigo</td>
+						<td>Food</td>
+						<td>Restaurant</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>I can't believe this!</td>
+						<td>しんじられない！</td>
+						<td>信じられない！</td>
+						<td>Casual</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>I want to go to ~, but...</td>
+						<td>～に　いきたいんですが...</td>
+						<td>～に行きたいんですが...</td>
+						<td>Polite</td>
+						<td>Places</td>
+						<td>Directions</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>I'll leave it to you</td>
+						<td>おまかせ　（します）</td>
+						<td>お任せ</td>
+						<td>Casual (polite)</td>
+						<td>Requests</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>I'm full</td>
+						<td>おなかが　いっぱいです。</td>
+						<td>お腹がいっぱいです。</td>
+						<td>&nbsp;</td>
+						<td>Food</td>
+						<td>Hunger</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>I'm hungry</td>
+						<td>おなかが　ぺこぺこです。</td>
+						<td>お腹がぺこぺこです。</td>
+						<td>&nbsp;</td>
+						<td>Food</td>
+						<td>Hunger</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>I'm hungry</td>
+						<td>おなかが　すきました。</td>
+						<td>お腹が空きました。</td>
+						<td>&nbsp;</td>
+						<td>Food</td>
+						<td>Hunger</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>I'm over it; It's fine already</td>
+						<td>もういい</td>
+						<td>&nbsp;</td>
+						<td>Casual</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>I'm thirsty</td>
+						<td>のどが　かわきました。</td>
+						<td>喉が乾きました</td>
+						<td>&nbsp;</td>
+						<td>Food</td>
+						<td>Hunger</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>I'm home</td>
+						<td>ただいま</td>
+						<td>ただ今</td>
+						<td>&nbsp;</td>
+						<td>Greetings</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>I'm leaving (bye for now)</td>
+						<td>いってきます</td>
+						<td>行って来ます。</td>
+						<td>Polite</td>
+						<td>Farewells</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>I'm looking forward to it.</td>
+						<td>たのしみ （にしています）</td>
+						<td>楽しみ　（にしています）</td>
+						<td>Casual (polite)</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>I'm lost.</td>
+						<td>まよっています。</td>
+						<td>迷っています。</td>
+						<td>Polite</td>
+						<td>Places</td>
+						<td>Directions</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>I'm terribly sorry (extremely polite apology).</td>
+						<td>もうしわけございません。</td>
+						<td>申し訳ございません。</td>
+						<td>Keigo</td>
+						<td>Apologies</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>If you do that, ~</td>
+						<td>そうすると、~</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>impossible; no way that could exist</td>
+						<td>ありえない</td>
+						<td>あり得ない</td>
+						<td>Casual</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Is this take-away?</td>
+						<td>おもちかえりですか。</td>
+						<td>お持ち帰りですか。</td>
+						<td>Keigo</td>
+						<td>Food</td>
+						<td>Restaurant</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Like (eg: on Facebook)</td>
+						<td>いいね</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>-</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Long time no see!</td>
+						<td>ひさしぶり（ですね）</td>
+						<td>久しぶり（ですね）</td>
+						<td>Casual (polite)</td>
+						<td>Greetings</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>No</td>
+						<td>いいえ</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>One more time please</td>
+						<td>もういちど （ください）。</td>
+						<td>もう一度　（ください）</td>
+						<td>Casual (polite)</td>
+						<td>Requests</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Phrase said after eating</td>
+						<td>ごちそうさまでした。</td>
+						<td>&nbsp;</td>
+						<td>Keigo</td>
+						<td>Food</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Phrase said before eating</td>
+						<td>いただきます。</td>
+						<td>&nbsp;</td>
+						<td>Keigo</td>
+						<td>Food</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Please</td>
+						<td>ください</td>
+						<td>&nbsp;</td>
+						<td>Polite</td>
+						<td>Requests</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Please enjoy your meal.</td>
+						<td>ゆっくりおめしあがりください。</td>
+						<td>ゆっくりお召し上がりください</td>
+						<td>Keigo</td>
+						<td>Food</td>
+						<td>Restaurant</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Please wait a moment.</td>
+						<td>しょうしょうおまちください。</td>
+						<td>少々お待ちください</td>
+						<td>Keigo</td>
+						<td>Apologies</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Pleased to meet you</td>
+						<td>(どうぞ) よろしく (おねがいします)</td>
+						<td>どうぞよろしくお願いします</td>
+						<td>Polite</td>
+						<td>Greetings</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Pleased to meet you (when you meet someone for the first time)</td>
+						<td>はじめまして</td>
+						<td>初めまして</td>
+						<td>Polite</td>
+						<td>Greetings</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>See you tomorrow</td>
+						<td>またあした</td>
+						<td>また明日</td>
+						<td>&nbsp;</td>
+						<td>Farewells</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>See you when you come home (bye)</td>
+						<td>いってらっしゃい</td>
+						<td>&nbsp;</td>
+						<td>Polite</td>
+						<td>Farewells</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Seriously?</td>
+						<td>まじ？</td>
+						<td>&nbsp;</td>
+						<td>Casual</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Sorry</td>
+						<td>ごめんなさい</td>
+						<td>&nbsp;</td>
+						<td>Casual</td>
+						<td>Apologies</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Thank you</td>
+						<td>ありがとう（ございます）</td>
+						<td>&nbsp;</td>
+						<td>Casual (polite)</td>
+						<td>Thanks</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Thank you for visiting our store.</td>
+						<td>ごらいてんありがとうございました。</td>
+						<td>ご来店ありがとうございました</td>
+						<td>Keigo</td>
+						<td>Shopping</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Thanks</td>
+						<td>どうも</td>
+						<td>&nbsp;</td>
+						<td>Casual</td>
+						<td>Thanks</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Thanks for your hard work</td>
+						<td>おつかれさま（でした）</td>
+						<td>お疲れ様でした</td>
+						<td>Keigo</td>
+						<td>Farewells</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>There's no hope</td>
+						<td>もうだめ</td>
+						<td>&nbsp;</td>
+						<td>Casual</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>This is a boring thing, but... (gift giving phrase)</td>
+						<td>つまらない もの です が．．．</td>
+						<td>&nbsp;</td>
+						<td>Keigo</td>
+						<td>Gifts</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>This is a small thing, but... (gift giving phrase)</td>
+						<td>ちいさい もの です が．．．</td>
+						<td>小さいものですが...</td>
+						<td>Keigo</td>
+						<td>Gifts</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>This way please.</td>
+						<td>こちらへどうぞ。</td>
+						<td>&nbsp;</td>
+						<td>Keigo</td>
+						<td>Food</td>
+						<td>Restaurant</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Umm...</td>
+						<td>ええと</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>-</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Umm...; ah...</td>
+						<td>あのう</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>-</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>We'll be waiting to see you again.</td>
+						<td>ごらいてんおまちしております。</td>
+						<td>ご来店お待ちしております。</td>
+						<td>Keigo</td>
+						<td>Shopping</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Welcome home</td>
+						<td>おかえりなさい</td>
+						<td>お帰りなさい</td>
+						<td>Polite</td>
+						<td>Greetings</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Welcome!</td>
+						<td>いらっしゃいませ！</td>
+						<td>&nbsp;</td>
+						<td>Keigo</td>
+						<td>Shopping</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Well...</td>
+						<td>さあ</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>-</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>What is it?</td>
+						<td>なんですか</td>
+						<td>何ですか</td>
+						<td>&nbsp;</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>What is your name?</td>
+						<td>おなまえは？</td>
+						<td>お名前は？</td>
+						<td>Polite</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>What would you like?</td>
+						<td>なにになさいますか。</td>
+						<td>何になさいますか。</td>
+						<td>Keigo</td>
+						<td>Food</td>
+						<td>Restaurant</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>What would you recommend?</td>
+						<td>おすすめはなんですか。</td>
+						<td>お進めは何ですか。</td>
+						<td>Polite</td>
+						<td>Food</td>
+						<td>Restaurant</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>What's your phone number?</td>
+						<td>でんわばんごうは ？</td>
+						<td>電話番号は？</td>
+						<td>&nbsp;</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Where are you from?</td>
+						<td>どこからきましたか。</td>
+						<td>どこから来ましたか。</td>
+						<td>&nbsp;</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Where is the ~?</td>
+						<td>～は　どこ ですか。</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>Places</td>
+						<td>Directions</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Will that be all?</td>
+						<td>いじょうで よろしいですか。</td>
+						<td>以上でよろしいですか。</td>
+						<td>Keigo</td>
+						<td>Shopping</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Would you like me to heat this up?</td>
+						<td>あたためますか。</td>
+						<td>温めますか</td>
+						<td>Polite</td>
+						<td>Food</td>
+						<td>Restaurant</td>
+						<td>Generally asked if you buy a meal from the fridge section of a convenience store</td>
+					</tr>
+					<tr>
+						<td>Yes</td>
+						<td>はい</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>General Conversation</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>You're welcome</td>
+						<td>どういたしまして</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+						<td>Thanks</td>
+						<td>-</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>~ becoming ~</td>
+						<td>はれ　のち　くもり</td>
+						<td>晴れのち曇り</td>
+						<td>&nbsp;</td>
+						<td>Weather</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+		<script>
+			document.getElementById("expressionsSortButtonEnglish").addEventListener("click", function () {
+				window.sortTableAlphabetically("vocabTableExpressions", "english", 0);
+			});
+			document.getElementById("expressionsSortButtonHiragana").addEventListener("click", function () {
+				window.sortTableAlphabetically("vocabTableExpressions", "hiragana", 1);
+			});
+		</script>
+	</body>
 </html>

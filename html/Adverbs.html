@@ -1,50 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mandatory Grammar - Adverbs</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        background-color: #00bdaa;
-        color: #400082;
-        font-family: "Kiwi Maru", serif;
-      }
-      .backToHome {
-        display: block;
-        margin: 0 auto;
-        position: fixed;
-        background-color: #400082;
-        color: white;
-        font-family: "Kiwi Maru";
-        font-size: 14px;
-        border: none;
-        margin-top: -22px;
-        margin-left: 40%;
-        margin-right: 40%;
-      }
-      .backToHome:hover {
-        background-color: #fe346e;
-        transition: all 150ms ease-in-out;
-      }
-    </style>
-  </head>
-  <body>
-    <button class="backToHome">↑ back to main page ↑</button>
-    <h1>Adverbs</h1>
-    <p>Content coming soon.</p>
-    <script>
-      function toMainMenu() {
-        window.location.href = "../index.html";
-      }
-      let backToHomeButton = document.querySelector(".backToHome");
-      backToHomeButton.addEventListener("click", toMainMenu);
-    </script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mandatory Grammar - Adverbs</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="./../css/pages/generic-page.css" />
+		<script type="text/javascript" src="./../javascript/script.js" defer></script>
+	</head>
+	<body>
+		<button class="backToHome">↑ back to main page ↑</button>
+		<main>
+			<h1 class="headings--main">Adverbs</h1>
+			<h3 class="headings--grammar">Grammar and Sentence Structures</h3>
+			<p class="para para--grammar-section">
+				The following table summarises the mandatory grammar and sentence patterns used with adverbs
+			</p>
+			<table class="grammar-table">
+				<tr id="adverbs-grammar-table__conversion-to-adverb">
+					<td colspan="2" class="grammar-table__english-headers">Turning adjectives into adverbs</td>
+				</tr>
+				<tr>
+					<td style="width: 50%; font-family: Kiwi Maru; font-weight: 800">い Adjective Examples</td>
+					<td style="width: 50%; font-family: Kiwi Maru; font-weight: 800">な Adjective Examples</td>
+				</tr>
+				<tr>
+					<td>
+						小さ<span class="grammar-table__spans--removed-char">い</span
+						><span class="grammar-table__spans--target-grammar">く</span>
+					</td>
+					<td>しずか<span class="grammar-table__spans--target-grammar">に</span></td>
+				</tr>
+				<tr>
+					<td>finely ("small<span class="grammar-table__spans--target-grammar">-ly</span>").</td>
+					<td>quietly ("quiet<span class="grammar-table__spans--target-grammar">-ly</span>").</td>
+				</tr>
+				<tr id="adverbs-grammar-table__using-adverbs">
+					<td colspan="2" class="grammar-table__english-headers">Using adverbs in sentences</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<p>
+							Adverbs require no further particles and should be added into the sentence before the word the
+							adverb is describing.
+						</p>
+						<br />
+						<p>
+							The following image highlights the differences between an adjective and an adverb and their
+							use cases:
+						</p>
+						<br />
+						<img src="./../assets/adverb-uses.png" />
+						<p class="reference">
+							Image taken from:
+							<a href="https://8020japanese.com/japanese-adverbs/ " target="#blank">8020japanese</a>
+						</p>
+					</td>
+				</tr>
+			</table>
+			<h3 class="headings--table">Table of Common Vocabulary</h3>
+
+			<table class="tableizer-table vocab-table" id="vocabTableAdverbs">
+				<thead>
+					<tr class="tableizer-firstrow vocab-table__header-row">
+						<th class="header-item header-item--english">
+							English<button
+								class="header-item__sort-btn header-item__sort-btn--english"
+								id="adverbsSortButtonEnglish"
+							>
+								⇅
+							</button>
+						</th>
+						<th class="header-item header-item--hiragana">
+							Hiragana<button
+								class="header-item__sort-btn header-item__sort-btn--hiragana"
+								id="adverbsSortButtonHiragana"
+							>
+								⇅
+							</button>
+						</th>
+						<th class="header-item header-item--kanji">Kanji</th>
+						<th>Main Category</th>
+						<th>Secondary Category</th>
+						<th>Notes</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>a little, a bit</td>
+						<td>すこし</td>
+						<td>少し</td>
+						<td>Degree Adverb</td>
+						<td>Frequency Adverb</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>a little, a bit</td>
+						<td>ちょっと</td>
+						<td>&nbsp;</td>
+						<td>Degree Adverb</td>
+						<td>Frequency Adverb</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>a lot (quantity)</td>
+						<td>いっぱい</td>
+						<td>&nbsp;</td>
+						<td>Degree Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>absolutely; definitely</td>
+						<td>ぜったい</td>
+						<td>絶対</td>
+						<td>Focusing Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>actually; really; truly</td>
+						<td>じっさいに</td>
+						<td>実際に</td>
+						<td>Focusing Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>after a few years</td>
+						<td>すうねんご</td>
+						<td>数年後</td>
+						<td>Time Adverb</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>all, everything</td>
+						<td>ぜんぶ</td>
+						<td>全部</td>
+						<td>Degree Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>alone, by oneself</td>
+						<td>ひとりで</td>
+						<td>一人で</td>
+						<td>Manner Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>already</td>
+						<td>もう</td>
+						<td>&nbsp;</td>
+						<td>Time Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>always</td>
+						<td>いつも</td>
+						<td>&nbsp;</td>
+						<td>Frequency Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>automatically</td>
+						<td>じどうてきに</td>
+						<td>自動的に</td>
+						<td>Manner Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>besides</td>
+						<td>ほかに</td>
+						<td>他に</td>
+						<td>Conjunctive Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>certainly; by all means</td>
+						<td>ぜひ</td>
+						<td>&nbsp;</td>
+						<td>Focusing Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>clearly</td>
+						<td>はっきり; はっきりと（は）</td>
+						<td>&nbsp;</td>
+						<td>Manner Adverb</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>continously; for quite some time</td>
+						<td>ずっと</td>
+						<td>&nbsp;</td>
+						<td>Time Adverb</td>
+						<td>Manner Adverb</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>currently</td>
+						<td>げんざい</td>
+						<td>現在</td>
+						<td>Time Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>far, distant</td>
+						<td>とおく</td>
+						<td>遠く</td>
+						<td>Distance</td>
+						<td>-</td>
+						<td>use this form + の before a noun</td>
+					</tr>
+					<tr>
+						<td>first of all</td>
+						<td>まず　</td>
+						<td>&nbsp;</td>
+						<td>Time Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>firstly</td>
+						<td>はじめに</td>
+						<td>初めに</td>
+						<td>Time Adverb</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>for the first time</td>
+						<td>はじめて</td>
+						<td>初めて</td>
+						<td>Manner Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>generally; mostly; approximately</td>
+						<td>だいたい</td>
+						<td>大体</td>
+						<td>Degree Adverb</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>greatly</td>
+						<td>すごく</td>
+						<td>&nbsp;</td>
+						<td>Degree Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>however (used to refer to different means)</td>
+						<td>どうでも</td>
+						<td>&nbsp;</td>
+						<td>Manner Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>in succession; one after another</td>
+						<td>つぎつぎ</td>
+						<td>次々</td>
+						<td>Time Adverb</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>just before</td>
+						<td>さっき</td>
+						<td>&nbsp;</td>
+						<td>Time Adverb</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>lots, many</td>
+						<td>たくさん</td>
+						<td>&nbsp;</td>
+						<td>Degree Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>not at all (with negative verb)</td>
+						<td>ぜんぜん</td>
+						<td>全然</td>
+						<td>Degree Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>not really (with negative verb)</td>
+						<td>あまり</td>
+						<td>余り</td>
+						<td>Degree Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>number of times; numerous times</td>
+						<td>なんど</td>
+						<td>何度</td>
+						<td>Time Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>of course</td>
+						<td>もちろん</td>
+						<td>&nbsp;</td>
+						<td>Conjunctive Adverb</td>
+						<td>Focusing Adverb</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>often (can also mean well)</td>
+						<td>よく</td>
+						<td>&nbsp;</td>
+						<td>Frequency Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>one time</td>
+						<td>いちど</td>
+						<td>一度</td>
+						<td>Time Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>originally, from the start</td>
+						<td>もともと</td>
+						<td>元々</td>
+						<td>Time Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Particularly,</td>
+						<td>とくに</td>
+						<td>特に</td>
+						<td>Focusing Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>properly</td>
+						<td>ちゃんと</td>
+						<td>&nbsp;</td>
+						<td>Manner Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>really</td>
+						<td>ほんとうに</td>
+						<td>本当に</td>
+						<td>Degree Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>recently; most recently</td>
+						<td>さいきん</td>
+						<td>最近</td>
+						<td>Time Adverb</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>separately (eg: paying separately)</td>
+						<td>べつべつ</td>
+						<td>別々</td>
+						<td>Manner Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>sometime</td>
+						<td>いつか</td>
+						<td>&nbsp;</td>
+						<td>Time Adverb</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>sometimes</td>
+						<td>ときどき</td>
+						<td>時々</td>
+						<td>Frequency Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>soon</td>
+						<td>すぐに</td>
+						<td>&nbsp;</td>
+						<td>Time Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>straight ahead</td>
+						<td>まっすぐ</td>
+						<td>真っ直ぐ</td>
+						<td>Place Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>suddenly</td>
+						<td>きゅうに</td>
+						<td>急に</td>
+						<td>Time Adverb</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>super (slang)</td>
+						<td>ちょう</td>
+						<td>超</td>
+						<td>Degree Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>the most</td>
+						<td>もっとも</td>
+						<td>最も</td>
+						<td>Degree Adverb</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>this next time</td>
+						<td>こんど</td>
+						<td>今度</td>
+						<td>Time Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>together</td>
+						<td>いっしょに</td>
+						<td>一緒に</td>
+						<td>Manner Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>very</td>
+						<td>とても</td>
+						<td>&nbsp;</td>
+						<td>Degree Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>walk, on foot (means)</td>
+						<td>あるいて (no particle)</td>
+						<td>歩いて</td>
+						<td>Manner Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>well (can also mean often)</td>
+						<td>よく</td>
+						<td>&nbsp;</td>
+						<td>Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>whatever</td>
+						<td>なんでも</td>
+						<td>何でも</td>
+						<td>-</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>whenever</td>
+						<td>いつでも</td>
+						<td>&nbsp;</td>
+						<td>Time Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>wherever</td>
+						<td>どこでも</td>
+						<td>&nbsp;</td>
+						<td>Place Adverb</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>whichever</td>
+						<td>どちらも</td>
+						<td>&nbsp;</td>
+						<td>-</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>whoever</td>
+						<td>だれでも</td>
+						<td>&nbsp;</td>
+						<td>People</td>
+						<td>-</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>whole life</td>
+						<td>いっしょう</td>
+						<td>一生</td>
+						<td>Time Adverb</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>with all one's heart</td>
+						<td>おもいきり</td>
+						<td>思い切り</td>
+						<td>Manner Adverb</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>with all one's might, as hard as one can</td>
+						<td>いっしょうけんめい</td>
+						<td>一生懸命</td>
+						<td>Manner Adverb</td>
+						<td>-</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+		<script>
+			document.getElementById("adverbsSortButtonEnglish").addEventListener("click", function () {
+				window.sortTableAlphabetically("vocabTableAdverbs", "english", 0);
+			});
+			document.getElementById("adverbsSortButtonHiragana").addEventListener("click", function () {
+				window.sortTableAlphabetically("vocabTableAdverbs", "hiragana", 1);
+			});
+		</script>
+	</body>
 </html>

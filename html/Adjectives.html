@@ -9,7 +9,7 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
-		<link rel="stylesheet" href="./../css/pages/adjectives.css" />
+		<link rel="stylesheet" href="./../css/pages/generic-page.css" />
 		<script type="text/javascript" src="./../javascript/script.js" defer></script>
 	</head>
 	<body>
@@ -17,7 +17,9 @@
 		<main>
 			<h1 class="headings--main">Adjectives</h1>
 			<h3 class="headings--grammar">Grammar and Sentence Structures</h3>
-			<p class="para">The following table summarises the mandatory grammar and sentence patterns used with adjectives.</p>
+			<p class="para para--grammar-section">
+				The following table summarises the mandatory grammar and sentence patterns used with adjectives.
+			</p>
 			<table class="grammar-table">
 				<thead>
 					<th style="width: 50%">い Adjective Examples</th>
@@ -309,7 +311,7 @@
 						<th class="header-item header-item--english">
 							English<button
 								class="header-item__sort-btn header-item__sort-btn--english"
-								id="sortButtonEnglish"
+								id="adjectivesSortButtonEnglish"
 							>
 								⇅
 							</button>
@@ -317,7 +319,7 @@
 						<th class="header-item header-item--hiragana">
 							Hiragana<button
 								class="header-item__sort-btn header-item__sort-btn--hiragana"
-								id="sortButtonHiragana"
+								id="adjectivesSortButtonHiragana"
 							>
 								⇅
 							</button>
@@ -1549,10 +1551,10 @@
 			</table>
 		</main>
 		<script>
-			document.getElementById("sortButtonEnglish").addEventListener("click", function () {
+			document.getElementById("adjectivesSortButtonEnglish").addEventListener("click", function () {
 				window.sortTableAlphabetically("vocabTableAdjectives", "english", 0);
 			});
-			document.getElementById("sortButtonHiragana").addEventListener("click", function () {
+			document.getElementById("adjectivesSortButtonHiragana").addEventListener("click", function () {
 				window.sortTableAlphabetically("vocabTableAdjectives", "hiragana", 1);
 			});
 		</script>
