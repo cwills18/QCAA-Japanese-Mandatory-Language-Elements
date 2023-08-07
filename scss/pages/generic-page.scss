@@ -30,9 +30,30 @@ main {
 	}
 	&--grammar {
 		@extend %default-page-subheading;
+		position: relative;
+		z-index: 15;
 	}
 	&--table {
 		@extend %default-page-subheading;
+		position: relative;
+		z-index: 15;
+		margin-bottom: -0.2em;
+	}
+}
+
+.para {
+	background-color: $teal;
+	position: relative;
+	z-index: 15;
+	margin-top: 1em;
+	margin-bottom: 2em;
+	&--grammar-section {
+		margin: -1em 0em;
+		padding: 1em 0em;
+	}
+	&--vocab-section {
+		margin: -0.2em 0em;
+		padding: 1.2em 0em;
 	}
 }
 
@@ -45,6 +66,8 @@ main {
 	border: 0.25em solid $purple;
 	font-family: $Japanese-handwritten;
 	font-weight: 400;
+	position: relative;
+	z-index: 15;
 	& th {
 		font-family: $default;
 		padding: 0.25em 0em;
@@ -79,6 +102,8 @@ main {
 	background-color: $teal;
 	z-index: 19;
 	position: relative;
+	padding: 1em 0em 1em;
+	width: 100%;
 	&__header-row {
 		background-color: $purple;
 		color: #fff;
@@ -103,6 +128,7 @@ main {
 
 .header-item {
 	position: relative;
+	padding: 0.6em 0em;
 	&--english {
 		min-width: 150px;
 	}

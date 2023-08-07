@@ -1,50 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mandatory Grammar - Conjunctions</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        background-color: #00bdaa;
-        color: #400082;
-        font-family: "Kiwi Maru", serif;
-      }
-      .backToHome {
-        display: block;
-        margin: 0 auto;
-        position: fixed;
-        background-color: #400082;
-        color: white;
-        font-family: "Kiwi Maru";
-        font-size: 14px;
-        border: none;
-        margin-top: -22px;
-        margin-left: 40%;
-        margin-right: 40%;
-      }
-      .backToHome:hover {
-        background-color: #fe346e;
-        transition: all 150ms ease-in-out;
-      }
-    </style>
-  </head>
-  <body>
-    <button class="backToHome">↑ back to main page ↑</button>
-    <h1>Conjunctions</h1>
-    <p>Content coming soon.</p>
-    <script>
-      function toMainMenu() {
-        window.location.href = "../index.html";
-      }
-      let backToHomeButton = document.querySelector(".backToHome");
-      backToHomeButton.addEventListener("click", toMainMenu);
-    </script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mandatory Grammar - Conjunctions</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="./../css/pages/generic-page.css" />
+		<script type="text/javascript" src="./../javascript/script.js" defer></script>
+	</head>
+	<body>
+		<button class="backToHome">↑ back to main page ↑</button>
+		<main>
+			<h1 class="headings--main">Conjunctions</h1>
+			<p class="para">
+				Conjunctions are words that are used to connect words, phrases and clauses. There are many conjunctions, but some
+				common ones in English include: "and", "but", "or", "therefore" and "because". In Japanese, we have to be very careful
+				to consider where the conjunction is being used, as there are different rules, and often entirely different words, for
+				conjunctions depending on whether they appear at the start or the middle of a sentence.
+			</p>
+			<h3 class="headings--table">Common Conjunctions for Sentence Beginnings</h3>
+			<p class="para para--vocab-section">These words can be used simply by adding them to the beginning of a sentence.</p>
+			<table class="tableizer-table vocab-table" id="vocabTableConjunctions">
+				<thead>
+					<tr class="tableizer-firstrow vocab-table__header-row">
+						<th class="header-item header-item--english">
+							English<button
+								class="header-item__sort-btn header-item__sort-btn--english"
+								id="conjunctionsSortButtonEnglish"
+							>
+								⇅
+							</button>
+						</th>
+						<th class="header-item header-item--hiragana">
+							Hiragana<button
+								class="header-item__sort-btn header-item__sort-btn--hiragana"
+								id="conjunctionsSortButtonHiragana"
+							>
+								⇅
+							</button>
+						</th>
+						<th class="header-item header-item--kanji">Kanji</th>
+						<th>Notes</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Actually,</td>
+						<td>じつは</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Afterwards / Later,</td>
+						<td>あとで</td>
+						<td>後で</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>And,</td>
+						<td>そして</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>And also / And so / And from that,</td>
+						<td>それから、</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>And then,</td>
+						<td>それで</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>But,</td>
+						<td>でも、</td>
+						<td>&nbsp;</td>
+						<td>Primarily verbal</td>
+					</tr>
+					<tr>
+						<td>For example,</td>
+						<td>たとえば</td>
+						<td>例えば</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>From this point,</td>
+						<td>これから、</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>However,</td>
+						<td>しかし、</td>
+						<td>&nbsp;</td>
+						<td>Primarily written, formal</td>
+					</tr>
+					<tr>
+						<td>However,</td>
+						<td>だけど、</td>
+						<td>&nbsp;</td>
+						<td>Casual</td>
+					</tr>
+					<tr>
+						<td>If / Perhaps,</td>
+						<td>もし、</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>If / Perhaps,</td>
+						<td>もしかしたら、</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>On one hand / On the other hand,</td>
+						<td>いっぽう</td>
+						<td>一方</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Or,</td>
+						<td>または</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Therefore,</td>
+						<td>だから、</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Unfortunately,</td>
+						<td>ざんねんながら</td>
+						<td>残念ながら</td>
+						<td>&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 class="headings--grammar">Common Conjunctions for Mid-Sentence</h3>
+			<p class="para para--grammar-section">
+				Using conjunctions in the middle of a sentence require a bit more care. Here is a sumary of the most common
+				conjunctions. This list is not exhaustive. Conjunctions like "because", "if", "before" etc. will be covered in depth
+				on other pages.
+			</p>
+			<table class="grammar-table">
+				<tr id="adverbs-grammar-table__conversion-to-adverb">
+					<td colspan="2" class="grammar-table__english-headers">Turning adjectives into adverbs</td>
+				</tr>
+				<tr>
+					<td style="width: 50%; font-family: Kiwi Maru; font-weight: 800">い Adjective Examples</td>
+					<td style="width: 50%; font-family: Kiwi Maru; font-weight: 800">な Adjective Examples</td>
+				</tr>
+				<tr>
+					<td>
+						小さ<span class="grammar-table__spans--removed-char">い</span
+						><span class="grammar-table__spans--target-grammar">く</span>
+					</td>
+					<td>しずか<span class="grammar-table__spans--target-grammar">に</span></td>
+				</tr>
+				<tr>
+					<td>finely ("small<span class="grammar-table__spans--target-grammar">-ly</span>").</td>
+					<td>quietly ("quiet<span class="grammar-table__spans--target-grammar">-ly</span>").</td>
+				</tr>
+				<tr id="adverbs-grammar-table__using-adverbs">
+					<td colspan="2" class="grammar-table__english-headers">Using adverbs in sentences</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<p>
+							Adverbs require no further particles and should be added into the sentence before the word the
+							adverb is describing.
+						</p>
+						<br />
+						<p>
+							The following image highlights the differences between an adjective and an adverb and their
+							use cases:
+						</p>
+						<br />
+						<img src="./../assets/adverb-uses.png" />
+						<p class="reference">
+							Image taken from:
+							<a href="https://8020japanese.com/japanese-adverbs/ " target="#blank">8020japanese</a>
+						</p>
+					</td>
+				</tr>
+			</table>
+		</main>
+		<script>
+			document.getElementById("conjunctionsSortButtonEnglish").addEventListener("click", function () {
+				window.sortTableAlphabetically("vocabTableConjunctions", "english", 0);
+			});
+			document.getElementById("conjunctionsSortButtonHiragana").addEventListener("click", function () {
+				window.sortTableAlphabetically("vocabTableConjunctions", "hiragana", 1);
+			});
+		</script>
+	</body>
 </html>
