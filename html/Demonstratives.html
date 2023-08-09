@@ -1,50 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mandatory Grammar - Demonstratives</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        background-color: #00bdaa;
-        color: #400082;
-        font-family: "Kiwi Maru";
-      }
-      .backToHome {
-        display: block;
-        margin: 0 auto;
-        position: fixed;
-        background-color: #400082;
-        color: white;
-        font-family: "Kiwi Maru";
-        font-size: 14px;
-        border: none;
-        margin-top: -22px;
-        margin-left: 40%;
-        margin-right: 40%;
-      }
-      .backToHome:hover {
-        background-color: #fe346e;
-        transition: all 150ms ease-in-out;
-      }
-    </style>
-  </head>
-  <body>
-    <button class="backToHome">↑ back to main page ↑</button>
-    <h1>Demonstratives</h1>
-    <p>Content coming soon.</p>
-    <script>
-      function toMainMenu() {
-        window.location.href = "../index.html";
-      }
-      let backToHomeButton = document.querySelector(".backToHome");
-      backToHomeButton.addEventListener("click", toMainMenu);
-    </script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mandatory Grammar - Demonstratives</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="./../css/pages/generic-page.css" />
+		<script type="text/javascript" src="./../javascript/script.js" defer></script>
+	</head>
+	<body>
+		<button class="backToHome">↑ back to main page ↑</button>
+		<main>
+			<h1 class="headings--main">Demonstratives</h1>
+			<p class="para">
+				Demonstratives are words like "this", "that", "these"and "those" that help us to understand which person or object is
+				being spoken about. We have two main types of demonstratives: demonstrative adjectives and demonstrative pronouns.
+			</p>
+			<img src="./../assets/demonstratives.png" />
+			<p class="reference">
+				Image taken from:
+				<a href="https://www.onlinemathlearning.com/demonstrative-pronouns.html" target="#blank">OnlineMathLearning.com</a>
+			</p>
+			<p class="para">
+				As you can see in the image above, the main difference between the two is that demonstrative adjectives are used as
+				adjectives to describe a noun, and demonstrative pronouns are used in place of regular pronouns. Let's have a closer
+				look at demonstrative adjectives.
+			</p>
+			<img src="./../assets/demonstrative-adjective.png" />
+			<p class="reference">
+				Image taken from:
+				<a href="https://www.yourdictionary.com/articles/demonstrative-adjectives" target="#blank">yourdictionary.com</a>
+			</p>
+			<p class="para">
+				Pretty straight forward right? Except in Japanese, there are two options for things further away. However, luckily
+				there is no distinction between singular and plural, so we really only have three basic variations - この、その and
+				あの.
+				<br />
+				<br />
+				In the right column of images in the picture below, you can see that この is used in the same way as "this", when it
+				is near to the speaker. その is being used for things further away, that are close to the listener. And あの is being
+				used for things that are far from both the speaker and the listener. In the left column, you can see a similar
+				pattern, but generally things not within reach but still considered relatively close would use その and anything
+				further away would use あの.
+			</p>
+			<img src="./../assets/kono-sono-ano.png" />
+			<p class="reference">
+				Image taken from:
+				<a
+					href="https://nihongonokobeya.com/genki-1-grammar-explanation-ask-for-a-price-using-kono-sono-ano-dono-noun/"
+					target="#blank"
+					>nihongonokobeya.com</a
+				>
+			</p>
+			<img src="./../assets/demonstrative-pronouns.png" />
+			<p class="reference">
+				Image taken from:
+				<a href="https://www.twinkl.co.in/teaching-wiki/demonstrative-pronouns" target="#blank">twinkl.co</a>
+			</p>
+			<img src="./../assets/pronouns.jpeg" />
+			<p class="reference">
+				Image taken from:
+				<a href="https://www.youtube.com/watch?app=desktop&v=JhF7UKtT9vA" target="#blank">Vocab Videos</a>
+			</p>
+			<h3 class="headings--table">Summary Table of Demonstratives</h3>
+			<table class="tableizer-table vocab-table" id="vocabTableDemonstratives">
+				<thead>
+					<tr class="tableizer-firstrow vocab-table__header-row">
+						<th class="header-item header-item--english">
+							English<button
+								class="header-item__sort-btn header-item__sort-btn--english"
+								id="demonstrativesSortButtonEnglish"
+							>
+								⇅
+							</button>
+						</th>
+						<th class="header-item header-item--hiragana">
+							Hiragana<button
+								class="header-item__sort-btn header-item__sort-btn--hiragana"
+								id="demonstrativesSortButtonHiragana"
+							>
+								⇅
+							</button>
+						</th>
+						<th class="header-item header-item--kanji">Kanji</th>
+						<th>Notes</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Actually,</td>
+						<td>じつは</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Afterwards / Later,</td>
+						<td>あとで</td>
+						<td>後で</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>And,</td>
+						<td>そして</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>And also / And so / And from that,</td>
+						<td>それから、</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>And then,</td>
+						<td>それで</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>But,</td>
+						<td>でも、</td>
+						<td>&nbsp;</td>
+						<td>Primarily verbal</td>
+					</tr>
+					<tr>
+						<td>For example,</td>
+						<td>たとえば</td>
+						<td>例えば</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>From this point,</td>
+						<td>これから、</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>However,</td>
+						<td>しかし、</td>
+						<td>&nbsp;</td>
+						<td>Primarily written, formal</td>
+					</tr>
+					<tr>
+						<td>However,</td>
+						<td>だけど、</td>
+						<td>&nbsp;</td>
+						<td>Casual</td>
+					</tr>
+					<tr>
+						<td>If / Perhaps,</td>
+						<td>もし、</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>If / Perhaps,</td>
+						<td>もしかしたら、</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>On one hand / On the other hand,</td>
+						<td>いっぽう</td>
+						<td>一方</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Or,</td>
+						<td>または</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Therefore,</td>
+						<td>だから、</td>
+						<td>&nbsp;</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>Unfortunately,</td>
+						<td>ざんねんながら</td>
+						<td>残念ながら</td>
+						<td>&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+		<script>
+			document.getElementById("demonstrativesSortButtonEnglish").addEventListener("click", function () {
+				window.sortTableAlphabetically("vocabTableDemonstratives", "english", 0);
+			});
+			document.getElementById("demonstrativesSortButtonHiragana").addEventListener("click", function () {
+				window.sortTableAlphabetically("vocabTableDemonstratives", "hiragana", 1);
+			});
+		</script>
+	</body>
 </html>
