@@ -1,50 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mandatory Grammar - Particles</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        background-color: #00bdaa;
-        color: #400082;
-        font-family: "Kiwi Maru";
-      }
-      .backToHome {
-        display: block;
-        margin: 0 auto;
-        position: fixed;
-        background-color: #400082;
-        color: white;
-        font-family: "Kiwi Maru";
-        font-size: 14px;
-        border: none;
-        margin-top: -22px;
-        margin-left: 40%;
-        margin-right: 40%;
-      }
-      .backToHome:hover {
-        background-color: #fe346e;
-        transition: all 150ms ease-in-out;
-      }
-    </style>
-  </head>
-  <body>
-    <button class="backToHome">↑ back to main page ↑</button>
-    <h1>Particles</h1>
-    <p>Content coming soon.</p>
-    <script>
-      function toMainMenu() {
-        window.location.href = "../index.html";
-      }
-      let backToHomeButton = document.querySelector(".backToHome");
-      backToHomeButton.addEventListener("click", toMainMenu);
-    </script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mandatory Grammar - Particles</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="./../css/pages/generic-page.css" />
+		<script type="text/javascript" src="./../javascript/script.js" defer></script>
+	</head>
+	<body>
+		<button class="backToHome">↑ back to main page ↑</button>
+		<main>
+			<h1 class="headings--main">Particles</h1>
+			<p class="para">
+				Particles can be tricky if you don't have a good understanding of each particle and what it does. Luckily, there are
+				some excellent resources available on the internet that cover the particles you are expected to know at a Year 12
+				level very well. The following image is a summary of the key particle uses in Japanese. You can download the full
+				particle cheatsheet from 8020 Japanese
+				<a href="https://8020japanese.com/grammar-cheat-sheet/" target="#blank">here</a>. The full print-out also has a few
+				sentence structure examples, and in particular sentences with often confused particle pairs such as は・が and に・で.
+			</p>
+			<img src="./../assets/particles-diagram.png" />
+			<p class="reference">
+				Image taken from:
+				<a href="https://8020japanese.com/grammar-cheat-sheet/" target="#blank">8020japanese.com</a>
+			</p>
+			<p class="para">
+				<a href="https://www.mlcjapanese.co.jp/n5_01_30.html" target="#blank">MLC Japanese</a> also has some helpful
+				print-outs on particles. They have a good one-page basic summary, and a more in-depth two-page summary (see images
+				below) with examples of all the different uses of the core particles. You can download these from their website , as
+				well as worksheets (with answers) to practise particles. They even have a whole section dedicated to は and が
+				<a href="https://www.mlcjapanese.co.jp/wa_ga.html" target="#blank">here</a>.
+				<br />
+				<br />
+				A basic summary of the particles:
+			</p>
+			<img src="./../assets/particles-examples.png" />
+			<p class="reference">
+				Image taken from:
+				<a href="https://www.mlcjapanese.co.jp/img/file9.pdf" target="#blank">MLCJapanese.co.jp</a>
+			</p>
+			<p class="para">A more in-depth summary of the particles:</p>
+			<img src="./../assets/particles-extended-1.png" />
+			<br />
+			<img src="./../assets/particles-extended-2.png" />
+			<p class="reference">
+				Images taken from:
+				<a href="https://www.mlcjapanese.co.jp/img/particle_2.pdf" target="#blank">MLCJapanese.co.jp</a>
+			</p>
+			<br />
+		</main>
+		<script>
+			document.getElementById("demonstrativesSortButtonEnglish").addEventListener("click", function () {
+				window.sortTableAlphabetically("vocabTableDemonstratives", "english", 0);
+			});
+			document.getElementById("demonstrativesSortButtonHiragana").addEventListener("click", function () {
+				window.sortTableAlphabetically("vocabTableDemonstratives", "hiragana", 1);
+			});
+		</script>
+	</body>
 </html>

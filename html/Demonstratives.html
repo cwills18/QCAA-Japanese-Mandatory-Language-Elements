@@ -10,7 +10,9 @@
 		<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="./../css/pages/generic-page.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 		<script type="text/javascript" src="./../javascript/script.js" defer></script>
+		<script type="text/javascript" src="./../javascript/column-visibility.js" defer></script>
 	</head>
 	<body>
 		<button class="backToHome">↑ back to main page ↑</button>
@@ -56,17 +58,85 @@
 					>nihongonokobeya.com</a
 				>
 			</p>
-			<img src="./../assets/demonstrative-pronouns.png" />
-			<p class="reference">
-				Image taken from:
-				<a href="https://www.twinkl.co.in/teaching-wiki/demonstrative-pronouns" target="#blank">twinkl.co</a>
+			<br />
+			<p class="para" id="pronoun-explanation">
+				Now, let's examine demonstrative pronouns. First of all, let's remember that pronouns are nouns used to make it easier
+				to be clear about subjects and objects of our sentences, without unnecessary wordiness. For example, let's look at the
+				following paragraph:
+				<br />
+				<br />
+				<em
+					>"Esmerelda went to the shops to buy some supplies. While she was there, she also bought herself an ice-cream.
+					But as she was leaving, she tripped and dropped it. Luckily, the staff there were nice and gave her a new
+					one."</em
+				>
+				<br />
+				<br />
+				Without pronouns, this paragraph would be:
+				<br />
+				<br />
+				<em
+					>"Esmerelda went to the shops to buy some supplies. While Esmerelda was at the shops, Esmerelda also bought
+					Esmerelda an ice-cream. But as Esmerelda was leaving, Esmerelda tripped and dropped the ice-cream. Luckily,
+					the staff at the ice-cream store were nice and gave Esmerelda a new ice-cream."</em
+				>
+				<br />
+				<br />
+				You get the idea. We would very quickly tire of having to say and repeat the same information over and over.
+				Particularly with such a long name like Esmerelda. The table below summarises some common English pronouns that we use
+				with people. But, as you can see in the above paragraphs, we also have pronouns that can be used with objects (eg: it,
+				them, they, one) and places (eg: here, there) and there's even <em>relative pronouns</em> (eg: who, that, which, when,
+				where) which are the ones used with relative clauses (eg: "I'll talk to my teacher <em>who</em> might know what to
+				do.", "My laptop is the one <em>which</em> has a big sticker on it." etc.)
 			</p>
 			<img src="./../assets/pronouns.jpeg" />
 			<p class="reference">
 				Image taken from:
 				<a href="https://www.youtube.com/watch?app=desktop&v=JhF7UKtT9vA" target="#blank">Vocab Videos</a>
 			</p>
+			<p class="para">
+				So now that we understand what pronouns are, we can have a better understanding of a demonstrative pronoun. A
+				demonstrative pronoun is defined as a pronoun that points to a specific noun or pronoun the audience already knows
+				about. The most common ones are "this", "that", "these" and "those". For example, the image below shows how these four
+				words are used with people. But we can also use these words with things (eg: "<em>This</em> is my dog") and concepts
+				(eg: "<em>Those</em> are interesting ideas.").
+			</p>
+			<img src="./../assets/demonstrative-pronouns.png" />
+			<p class="reference">
+				Image taken from:
+				<a href="https://www.twinkl.co.in/teaching-wiki/demonstrative-pronouns" target="#blank">twinkl.co</a>
+			</p>
+			<p class="para">
+				<strong>Note about using demonstratives in Japanese:</strong><br />
+				Remember the rule that if you are using a demonstrative adjective, you must follow it immediately with some kind noun
+				of what you are describing. If you are using a demonstrative pronoun, it will be used on it's own in front of a
+				particle (usually は or が, but could be で if you want to say something like "with ~" (eg:
+				「それで、おわりましょう。」>> "With that, let's finish up." )
+			</p>
 			<h3 class="headings--table">Summary Table of Demonstratives</h3>
+			<div class="visible-col-dropdown">
+				<p class="visible-col-dropdown__para">Customise Columns</p>
+				<i class="visible-col-dropdown__icon visible-col-dropdown__icon--down fa-solid fa-caret-down"></i>
+				<i class="visible-col-dropdown__icon visible-col-dropdown__icon--up fa-solid fa-caret-up"></i>
+			</div>
+			<div class="visible-col-dropdown--expanded">
+				<div>
+					<input type="checkbox" id="vocabEnglishColCheck" class="checkbox" checked />
+					<label for="vocabEnglishColCheck">English</label>
+				</div>
+				<div>
+					<input type="checkbox" id="vocabHiraganaColCheck" class="checkbox" checked />
+					<label for="vocabHiraganaColCheck">Hiragana</label>
+				</div>
+				<div>
+					<input type="checkbox" id="vocabTypeColCheck" class="checkbox" checked />
+					<label for="vocabTypeColCheck">Demonstrative Type</label>
+				</div>
+				<div>
+					<input type="checkbox" id="vocabNotesColCheck" class="checkbox" checked />
+					<label for="vocabNotesColCheck">Notes</label>
+				</div>
+			</div>
 			<table class="tableizer-table vocab-table" id="vocabTableDemonstratives">
 				<thead>
 					<tr class="tableizer-firstrow vocab-table__header-row">
@@ -86,116 +156,99 @@
 								⇅
 							</button>
 						</th>
-						<th class="header-item header-item--kanji">Kanji</th>
+						<th>Demonstrative Type</th>
 						<th>Notes</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>Actually,</td>
-						<td>じつは</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-					</tr>
-					<tr>
-						<td>Afterwards / Later,</td>
-						<td>あとで</td>
-						<td>後で</td>
+						<td>that</td>
+						<td>それ</td>
+						<td>Pronoun</td>
 						<td>&nbsp;</td>
 					</tr>
 					<tr>
-						<td>And,</td>
-						<td>そして</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-					</tr>
-					<tr>
-						<td>And also / And so / And from that,</td>
-						<td>それから、</td>
-						<td>&nbsp;</td>
+						<td>that [noun]</td>
+						<td>その[noun]</td>
+						<td>Adjective</td>
 						<td>&nbsp;</td>
 					</tr>
 					<tr>
-						<td>And then,</td>
-						<td>それで</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-					</tr>
-					<tr>
-						<td>But,</td>
-						<td>でも、</td>
-						<td>&nbsp;</td>
-						<td>Primarily verbal</td>
-					</tr>
-					<tr>
-						<td>For example,</td>
-						<td>たとえば</td>
-						<td>例えば</td>
+						<td>that [noun] (over there)</td>
+						<td>あの[noun]</td>
+						<td>Adjective</td>
 						<td>&nbsp;</td>
 					</tr>
 					<tr>
-						<td>From this point,</td>
-						<td>これから、</td>
-						<td>&nbsp;</td>
+						<td>that kind of [noun]</td>
+						<td>そういう[noun]</td>
+						<td>Adjective</td>
+						<td>Common phrase: そういうこと ("that kind of thing")</td>
+					</tr>
+					<tr>
+						<td>that one (between two or more choices)</td>
+						<td>そちろ・そっち</td>
+						<td>Pronoun</td>
 						<td>&nbsp;</td>
 					</tr>
 					<tr>
-						<td>However,</td>
-						<td>しかし、</td>
-						<td>&nbsp;</td>
-						<td>Primarily written, formal</td>
-					</tr>
-					<tr>
-						<td>However,</td>
-						<td>だけど、</td>
-						<td>&nbsp;</td>
-						<td>Casual</td>
-					</tr>
-					<tr>
-						<td>If / Perhaps,</td>
-						<td>もし、</td>
-						<td>&nbsp;</td>
+						<td>that one over there</td>
+						<td>あれ</td>
+						<td>Pronoun</td>
 						<td>&nbsp;</td>
 					</tr>
 					<tr>
-						<td>If / Perhaps,</td>
-						<td>もしかしたら、</td>
-						<td>&nbsp;</td>
-						<td>&nbsp;</td>
-					</tr>
-					<tr>
-						<td>On one hand / On the other hand,</td>
-						<td>いっぽう</td>
-						<td>一方</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Or,</td>
-						<td>または</td>
-						<td>&nbsp;</td>
+						<td>that one over there (when specifying between two or more options)</td>
+						<td>あちら・あっち</td>
+						<td>Pronoun</td>
 						<td>&nbsp;</td>
 					</tr>
 					<tr>
-						<td>Therefore,</td>
-						<td>だから、</td>
-						<td>&nbsp;</td>
+						<td>this</td>
+						<td>これ</td>
+						<td>Pronoun</td>
 						<td>&nbsp;</td>
 					</tr>
 					<tr>
-						<td>Unfortunately,</td>
-						<td>ざんねんながら</td>
-						<td>残念ながら</td>
+						<td>this [noun]</td>
+						<td>この[noun]</td>
+						<td>Adjective</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td>this kind of [noun]</td>
+						<td>こういう[noun]</td>
+						<td>Adjective</td>
+						<td>Somewhat common phrase: こういうこと("this kind of thing")</td>
+					</tr>
+					<tr>
+						<td>this one (between 2 or more choices)</td>
+						<td>こちら・こっち</td>
+						<td>Pronoun</td>
 						<td>&nbsp;</td>
 					</tr>
 				</tbody>
 			</table>
+			<div class="filtered-vocab-table"></div>
 		</main>
 		<script>
-			document.getElementById("demonstrativesSortButtonEnglish").addEventListener("click", function () {
-				window.sortTableAlphabetically("vocabTableDemonstratives", "english", 0);
+			document.querySelector(".visible-col-dropdown__icon--down").addEventListener("click", function () {
+				showCustomiseColumns();
 			});
-			document.getElementById("demonstrativesSortButtonHiragana").addEventListener("click", function () {
-				window.sortTableAlphabetically("vocabTableDemonstratives", "hiragana", 1);
+			document.querySelector(".visible-col-dropdown__icon--up").addEventListener("click", function () {
+				hideCustomiseColumns();
+			});
+			document.getElementById("vocabEnglishColCheck").addEventListener("click", function () {
+				toggleVisibility(0);
+			});
+			document.getElementById("vocabHiraganaColCheck").addEventListener("click", function () {
+				toggleVisibility(1);
+			});
+			document.getElementById("vocabTypeColCheck").addEventListener("click", function () {
+				toggleVisibility(2);
+			});
+			document.getElementById("vocabNotesColCheck").addEventListener("click", function () {
+				toggleVisibility(3);
 			});
 		</script>
 	</body>
