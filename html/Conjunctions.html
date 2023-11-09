@@ -356,6 +356,12 @@
 			</table>
 		</main>
 		<script>
+			document.querySelector(".visible-col-dropdown__icon--down").addEventListener("click", function () {
+				showCustomiseColumns();
+			});
+			document.querySelector(".visible-col-dropdown__icon--up").addEventListener("click", function () {
+				hideCustomiseColumns();
+			});
 			document.getElementById("vocabEnglishColCheck").addEventListener("click", function () {
 				toggleVisibility(0);
 			});
@@ -368,30 +374,7 @@
 			document.getElementById("vocabNotesColCheck").addEventListener("click", function () {
 				toggleVisibility(3);
 			});
-			// document.getElementById("conjunctionsSortButtonEnglish").addEventListener("click", function () {
-			// 	window.sortTableAlphabetically("vocabTableConjunctions", "english", 0);
-			// });
-			// document.getElementById("conjunctionsSortButtonHiragana").addEventListener("click", function () {
-			// 	window.sortTableAlphabetically("vocabTableConjunctions", "hiragana", 1);
-			// });
-			// document.getElementById("vocabEnglishColCheck").addEventListener("click", function () {
-			// 	toggleVisibility(0);
-			// });
-			// document.getElementById("vocabHiraganaColCheck").addEventListener("click", function () {
-			// 	toggleVisibility(1);
-			// });
-			// document.getElementById("vocabKanjiColCheck").addEventListener("click", function () {
-			// 	toggleVisibility(2);
-			// });
-			// document.getElementById("vocabNotesColCheck").addEventListener("click", function () {
-			// 	toggleVisibility(3);
-			// });
-			document.querySelector(".visible-col-dropdown__icon--down").addEventListener("click", function () {
-				showCustomiseColumns();
-			});
-			document.querySelector(".visible-col-dropdown__icon--up").addEventListener("click", function () {
-				hideCustomiseColumns();
-			});
+	
 		</script>
 	</body>
 </html>

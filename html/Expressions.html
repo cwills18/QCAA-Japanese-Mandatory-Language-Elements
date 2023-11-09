@@ -23,6 +23,41 @@
 				The following table summarises common expressions in Japanese that you should know. All of the QCAA mandatory
 				expressions are contained in this table.
 			</p>
+			<div class="visible-col-dropdown">
+				<p class="visible-col-dropdown__para">Customise Columns</p>
+				<i class="visible-col-dropdown__icon visible-col-dropdown__icon--down fa-solid fa-caret-down"></i>
+				<i class="visible-col-dropdown__icon visible-col-dropdown__icon--up fa-solid fa-caret-up"></i>
+			</div>
+			<div class="visible-col-dropdown--expanded">
+				<div>
+					<input type="checkbox" id="vocabEnglishColCheck" class="checkbox" checked />
+					<label for="vocabEnglishColCheck">English</label>
+				</div>
+				<div>
+					<input type="checkbox" id="vocabHiraganaColCheck" class="checkbox" checked />
+					<label for="vocabHiraganaColCheck">Hiragana</label>
+				</div>
+				<div>
+					<input type="checkbox" id="vocabKanjiColCheck" class="checkbox" checked />
+					<label for="vocabKanjiColCheck">Kanji</label>
+				</div>
+				<div>
+					<input type="checkbox" id="vocabTypeColCheck" class="checkbox" checked />
+					<label for="vocabTypeColCheck">Politeness</label>
+				</div>
+				<div>
+					<input type="checkbox" id="vocabMainCatColCheck" class="checkbox" checked />
+					<label for="vocabMainCatColCheck">Main Category</label>
+				</div>
+				<div>
+					<input type="checkbox" id="vocabSecCatColCheck" class="checkbox" checked />
+					<label for="vocabSecCatColCheck">Secondary Category</label>
+				</div>
+				<div>
+					<input type="checkbox" id="vocabNotesColCheck" class="checkbox" checked />
+					<label for="vocabNotesColCheck">Notes</label>
+				</div>
+			</div>
 			<table class="tableizer-table vocab-table" id="vocabTableExpressions">
 				<thead>
 					<tr class="tableizer-firstrow vocab-table__header-row">
@@ -772,14 +807,9 @@
 					</tr>
 				</tbody>
 			</table>
+			<div class="filtered-vocab-table"></div>
 		</main>
 		<script>
-			document.getElementById("expressionsSortButtonEnglish").addEventListener("click", function () {
-				window.sortTableAlphabetically("vocabTableExpressions", "english", 0);
-			});
-			document.getElementById("expressionsSortButtonHiragana").addEventListener("click", function () {
-				window.sortTableAlphabetically("vocabTableExpressions", "hiragana", 1);
-			});
 			document.getElementById("vocabEnglishColCheck").addEventListener("click", function () {
 				toggleVisibility(0);
 			});
@@ -789,7 +819,7 @@
 			document.getElementById("vocabKanjiColCheck").addEventListener("click", function () {
 				toggleVisibility(2);
 			});
-			document.getElementById("vocabPolitenessColCheck").addEventListener("click", function () {
+			document.getElementById("vocabTypeColCheck").addEventListener("click", function () {
 				toggleVisibility(3);
 			});
 			document.getElementById("vocabMainCatColCheck").addEventListener("click", function () {
