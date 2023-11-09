@@ -10,7 +10,9 @@
 		<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="./../css/pages/generic-page.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 		<script type="text/javascript" src="./../javascript/script.js" defer></script>
+		<script type="text/javascript" src="./../javascript/column-visibility.js" defer></script>
 	</head>
 	<body>
 		<button class="backToHome">↑ back to main page ↑</button>
@@ -24,6 +26,29 @@
 			</p>
 			<h3 class="headings--table">Common Conjunctions for Sentence Beginnings</h3>
 			<p class="para para--vocab-section">These words can be used simply by adding them to the beginning of a sentence.</p>
+			<div class="visible-col-dropdown">
+				<p class="visible-col-dropdown__para">Customise Columns</p>
+				<i class="visible-col-dropdown__icon visible-col-dropdown__icon--down fa-solid fa-caret-down"></i>
+				<i class="visible-col-dropdown__icon visible-col-dropdown__icon--up fa-solid fa-caret-up"></i>
+			</div>
+			<div class="visible-col-dropdown--expanded">
+				<div>
+					<input type="checkbox" id="vocabEnglishColCheck" class="checkbox" checked />
+					<label for="vocabEnglishColCheck">English</label>
+				</div>
+				<div>
+					<input type="checkbox" id="vocabHiraganaColCheck" class="checkbox" checked />
+					<label for="vocabHiraganaColCheck">Hiragana</label>
+				</div>
+				<div>
+					<input type="checkbox" id="vocabKanjiColCheck" class="checkbox" checked />
+					<label for="vocabKanjiColCheck">Kanji</label>
+				</div>
+				<div>
+					<input type="checkbox" id="vocabNotesColCheck" class="checkbox" checked />
+					<label for="vocabNotesColCheck">Notes</label>
+				</div>
+			</div>
 			<table class="tableizer-table vocab-table" id="vocabTableConjunctions">
 				<thead>
 					<tr class="tableizer-firstrow vocab-table__header-row">
@@ -146,6 +171,7 @@
 					</tr>
 				</tbody>
 			</table>
+			<div class="filtered-vocab-table"></div>
 			<h3 class="headings--grammar">Common Conjunctions for Mid-Sentence</h3>
 			<p class="para para--grammar-section">
 				Using conjunctions in the middle of a sentence require a bit more care. Here is a sumary of the most common
@@ -260,7 +286,7 @@
         </tr>
         <tr>
 					<td colspan="2" style="font-family: Kiwi Maru; font-weight: 400; text-align: left; padding-left: 1em">
-						For a casual version of "but", add <span class="grammar-table__spans--target-grammar">けど</span> (or one of it's variations such as <span
+						For a casual version of "but", add <span class="grammar-table__spans--target-grammar">けど</span> (or one of its variations such as <span
 						class="grammar-table__spans--target-grammar">けれど</span> or <span class="grammar-table__spans--target-grammar">けれども</span>) to the end of any plain sentence.
           </td>
         </tr>
@@ -330,11 +356,41 @@
 			</table>
 		</main>
 		<script>
-			document.getElementById("conjunctionsSortButtonEnglish").addEventListener("click", function () {
-				window.sortTableAlphabetically("vocabTableConjunctions", "english", 0);
+			document.getElementById("vocabEnglishColCheck").addEventListener("click", function () {
+				toggleVisibility(0);
 			});
-			document.getElementById("conjunctionsSortButtonHiragana").addEventListener("click", function () {
-				window.sortTableAlphabetically("vocabTableConjunctions", "hiragana", 1);
+			document.getElementById("vocabHiraganaColCheck").addEventListener("click", function () {
+				toggleVisibility(1);
+			});
+			document.getElementById("vocabKanjiColCheck").addEventListener("click", function () {
+				toggleVisibility(2);
+			});
+			document.getElementById("vocabNotesColCheck").addEventListener("click", function () {
+				toggleVisibility(3);
+			});
+			// document.getElementById("conjunctionsSortButtonEnglish").addEventListener("click", function () {
+			// 	window.sortTableAlphabetically("vocabTableConjunctions", "english", 0);
+			// });
+			// document.getElementById("conjunctionsSortButtonHiragana").addEventListener("click", function () {
+			// 	window.sortTableAlphabetically("vocabTableConjunctions", "hiragana", 1);
+			// });
+			// document.getElementById("vocabEnglishColCheck").addEventListener("click", function () {
+			// 	toggleVisibility(0);
+			// });
+			// document.getElementById("vocabHiraganaColCheck").addEventListener("click", function () {
+			// 	toggleVisibility(1);
+			// });
+			// document.getElementById("vocabKanjiColCheck").addEventListener("click", function () {
+			// 	toggleVisibility(2);
+			// });
+			// document.getElementById("vocabNotesColCheck").addEventListener("click", function () {
+			// 	toggleVisibility(3);
+			// });
+			document.querySelector(".visible-col-dropdown__icon--down").addEventListener("click", function () {
+				showCustomiseColumns();
+			});
+			document.querySelector(".visible-col-dropdown__icon--up").addEventListener("click", function () {
+				hideCustomiseColumns();
 			});
 		</script>
 	</body>

@@ -1,8 +1,24 @@
 function toMainMenu() {
 	window.location.href = "./../index.html";
 }
+
 const backToHomeButton = document.querySelector(".backToHome");
 backToHomeButton.addEventListener("click", toMainMenu);
+
+function loadSortQueries() {
+	const englishSort = document.querySelectorAll(".header-item__sort-btn--english");
+	englishSort.forEach((x) =>
+		x.addEventListener("click", function () {
+			sortTableAlphabetically("english", 0);
+		})
+	);
+	const hiraganaSort = document.querySelectorAll(".header-item__sort-btn--hiragana");
+	hiraganaSort.forEach((x) =>
+		x.addEventListener("click", function () {
+			sortTableAlphabetically("hiragana", 1);
+		})
+	);
+}
 
 //Since the table loads with English already in alphabetical order,
 //the default value to sort for English will be reverse. The following
@@ -15,8 +31,15 @@ let hiraganaSortToggle = "az";
 
 //a function that will sort tables alphabetically or reverse alphabetically by column, you pass the id of the
 //table in, the name of the column,  and the columnNumber (first column being 0).
-function sortTableAlphabetically(tableId, columnName, columnNumber) {
-	const table = document.getElementById(tableId);
+function sortTableAlphabetically(columnName, columnNumber) {
+	//note: due to slowness on large tables - should look into adding a "loading" notice
+	const tableOptions = document.querySelectorAll(".vocab-table");
+	let table;
+	if (tableOptions.length > 1) {
+		table = tableOptions[1];
+	} else {
+		table = tableOptions[0];
+	}
 	let toggle, rows, shouldSwitch, i, x, y;
 	switch (columnName) {
 		case "hiragana":
@@ -64,3 +87,5 @@ function sortTableAlphabetically(tableId, columnName, columnNumber) {
 		}
 	}
 }
+
+loadSortQueries();

@@ -10,7 +10,9 @@
 		<link href="https://fonts.googleapis.com/css2?family=Klee+One:wght@400;600&display=swap" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="./../css/pages/generic-page.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 		<script type="text/javascript" src="./../javascript/script.js" defer></script>
+		<script type="text/javascript" src="./../javascript/column-visibility.js" defer></script>
 	</head>
 	<body>
 		<button class="backToHome">↑ back to main page ↑</button>
@@ -777,6 +779,33 @@
 			});
 			document.getElementById("expressionsSortButtonHiragana").addEventListener("click", function () {
 				window.sortTableAlphabetically("vocabTableExpressions", "hiragana", 1);
+			});
+			document.getElementById("vocabEnglishColCheck").addEventListener("click", function () {
+				toggleVisibility(0);
+			});
+			document.getElementById("vocabHiraganaColCheck").addEventListener("click", function () {
+				toggleVisibility(1);
+			});
+			document.getElementById("vocabKanjiColCheck").addEventListener("click", function () {
+				toggleVisibility(2);
+			});
+			document.getElementById("vocabPolitenessColCheck").addEventListener("click", function () {
+				toggleVisibility(3);
+			});
+			document.getElementById("vocabMainCatColCheck").addEventListener("click", function () {
+				toggleVisibility(4);
+			});
+			document.getElementById("vocabSecCatColCheck").addEventListener("click", function () {
+				toggleVisibility(5);
+			});
+			document.getElementById("vocabNotesColCheck").addEventListener("click", function () {
+				toggleVisibility(6);
+			});
+			document.querySelector(".visible-col-dropdown__icon--down").addEventListener("click", function () {
+				showCustomiseColumns();
+			});
+			document.querySelector(".visible-col-dropdown__icon--up").addEventListener("click", function () {
+				hideCustomiseColumns();
 			});
 		</script>
 	</body>
